@@ -13,7 +13,7 @@ app.use(cookieParser());
 app.use(bodyparser.json());
 app.use(
   cors({
-    origin: "http://localhost:5173/",
+    origin: "https://attendance-hv7p.onrender.com/",
   })
 );
 
