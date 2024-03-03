@@ -13,7 +13,7 @@ app.use(cookieParser());
 app.use(bodyparser.json());
 app.use(
   cors({
-    origin: "https://attendance-hv7p.onrender.com/",
+    origin: "https://attendance-ahtvwkkq6-saurabh9323.vercel.app/",
   })
 );
 
