@@ -13,8 +13,8 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyparser.json());
 // Define the list of allowed origins
 const allowedOrigins = [
-  'https://attendance-ahtvwkkq6-saurabh9323.vercel.app',
-  'http://localhost:5173'
+  'https://attendance-ahtvwkkq6-saurabh9323.vercel.app/',
+  'http://localhost:5173/'
 ];
 
 // CORS middleware function
