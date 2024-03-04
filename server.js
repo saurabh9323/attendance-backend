@@ -32,8 +32,8 @@ const corsOptions = {
 };
 
 // Use the CORS middleware
-app.use(cors(corsOptions
-            app.use(cookieParser());
+app.use(cors(corsOptions));
+app.use(cookieParser());
 
 app.use("/api", routers);
 
