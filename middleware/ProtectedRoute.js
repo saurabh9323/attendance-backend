@@ -1,12 +1,17 @@
-// module.exports = ProtectedRoute;
 const jwt = require("jsonwebtoken");
 
 const ProtectedRoute = async (req, res, next) => {
   try {
-    const token = req.cookies?.authToken;
+    let token = req.cookies?.authToken;
 
+    // Check if the cookie doesn't have a token
     if (!token) {
-      return res.status(401).json({ message: "No token provided" });
+      // Fallback to using token from localStorage if available
+      token = localStorage.getItem("token");
+
+      if (!token) {
+        return res.status(401).json({ message: "No token provided" });
+      }
     }
 
     const decoded = jwt.verify(token, process.env.SECRET_KEY);
